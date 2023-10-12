@@ -439,6 +439,21 @@ def bdd100k_palette():
             [0, 0, 230], [119, 11, 32]]
 
 
+def floodnet_classes():
+    """FloodNet class names for external use"""
+    return [
+        'background', 'building flooded', 'building non-flooded', 'road flooded',
+        'road non-flooded', 'water', 'tree', 'vehicle', 'pool', 'grass'
+    ]
+
+
+def floodnet_palette():
+    """floodnet palette for external use(same with cityscapes)"""
+    return [[0, 0, 0], [255, 0, 0], [0, 255, 0], [0, 255, 120], [0, 0, 255],
+            [255, 0, 255], [70, 70, 220], [102, 102, 156], [190, 153, 153],
+            [180, 165, 180]]
+
+
 dataset_aliases = {
     'cityscapes': ['cityscapes'],
     'ade': ['ade', 'ade20k'],
@@ -456,7 +471,8 @@ dataset_aliases = {
     'lip': ['LIP', 'lip'],
     'mapillary_v1': ['mapillary_v1'],
     'mapillary_v2': ['mapillary_v2'],
-    'bdd100k': ['bdd100k']
+    'bdd100k': ['bdd100k'],
+    'floodnet': ['floodnet']
 }
 
 

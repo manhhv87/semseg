@@ -12,7 +12,7 @@ from .basesegdataset import BaseSegDataset
 
 
 @DATASETS.register_module()
-class REFUGEDataset(BaseSegDataset):
+class FloodNetDataset(BaseSegDataset):
     """FloodNet dataset.
 
     In segmentation map annotation for FloodNet, 0 stands for background, which
