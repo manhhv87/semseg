@@ -93,7 +93,7 @@ def main():
 
     with tempfile.TemporaryDirectory(dir=args.tmp_dir) as tmp_dir:
         for file in files:
-            # search data folders for training,validation,test
+            # search data folders for training, validation, test
             mode = list(
                 filter(lambda x: file.lower().find(x) != -1,
                        ['training', 'test', 'validation']))[0]
