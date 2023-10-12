@@ -85,6 +85,7 @@ def main():
     mkdir_or_exist(osp.join(out_dir, 'annotations', 'test'))
 
     print('Generating images and annotations...')
+    
     # process data from the child dir on the first rank
     cur_dir, dirs, files = list(os.walk(raw_data_root))[0]
     print('====================')
