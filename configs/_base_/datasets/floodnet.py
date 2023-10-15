@@ -1,9 +1,9 @@
 # dataset settings
 dataset_type = 'FloodNetDataset'
-data_root = 'data/FloodNet'
-train_img_scale = (2056, 2124)
-val_img_scale = (1634, 1634)
-test_img_scale = (1634, 1634)
+data_root = './data/FloodNet'
+train_img_scale = (3000, 4000)
+val_img_scale = (3000, 4000)
+test_img_scale = (3000, 4000)
 crop_size = (512, 512)
 
 train_pipeline = [
@@ -52,7 +52,7 @@ tta_pipeline = [
         ])
 ]
 train_dataloader = dict(
-    batch_size=4,
+    batch_size=2,
     num_workers=4,
     persistent_workers=True,
     sampler=dict(type='InfiniteSampler', shuffle=True),
