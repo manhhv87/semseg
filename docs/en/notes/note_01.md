@@ -21,12 +21,12 @@ In MMSegmentation, a semantic segmentation algorithm model is called segmentor, 
 
 > - `data_preprocessor` is responsible for transporting the data output from the data transformation pipeline to the designated device, and performing operations such as normalization, padding, and batching on it. The advantage of this is that during the data change stage, the data format is uint8. After the data is transferred to the GPU, it is then converted to FP32 for normalization, which reduces the computing pressure on the CPU.
 
-> - Backbone extracts feature maps from input images. Common models include ResNet, Swin transformer, etc.
+> - `Backbone extracts` feature maps from input images. Common models include ResNet, Swin transformer, etc.
 
-> - Neck, connects backbone and decode_head, further processes the feature map output from backbone and then inputs it to the decoding head. Common networks include Feature Pyramid Network FPN.
+> - `Neck`, connects backbone and decode_head, further processes the feature map output from backbone and then inputs it to the decoding head. Common networks include Feature Pyramid Network FPN.
 
-> - decode_head is responsible for predicting the final segmentation result from the input feature map.
+> - `decode_head` is responsible for predicting the final segmentation result from the input feature map.
 
-> - auxiliary_head (optional) is responsible for predicting segmentation results from the input feature map, but the results only participate in loss calculation during the training process and do not participate in reasoning. During reasoning, the output results are only predicted from the decoding head.
+> - `auxiliary_head (optional)` is responsible for predicting segmentation results from the input feature map, but the results only participate in loss calculation during the training process and do not participate in reasoning. During reasoning, the output results are only predicted from the decoding head.
 
-> - Loss is responsible for the loss calculation of the neural network output results and true values, and is used for model gradient calculation during backpropagation.
+> - `Loss` is responsible for the loss calculation of the neural network output results and true values, and is used for model gradient calculation during backpropagation.
