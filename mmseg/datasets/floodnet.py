@@ -29,7 +29,7 @@ class FloodNetDataset(BaseSegDataset):
     def __init__(self, **kwargs) -> None:
         super().__init__(
             img_suffix='.jpg',
-            seg_map_suffix='_lab.png',
+            seg_map_suffix='.png',
             reduce_zero_label=False,
             **kwargs)
         assert fileio.exists(
