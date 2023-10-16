@@ -3,7 +3,6 @@
 - data structure
 
 MMSegmentation 1.0 introduces the SegDataSample data structure, which encapsulates the data in semantic segmentation and is used for data transfer between various functional modules. There are three fields in SegDataSample: gt_sem_seg, pred_sem_seg and seg_logits. The first two are segmentation masks corresponding to labels and model predictions, and seg logits are the unnormalized output of the last layer of the model.
-
   - Dataset and data change operations
 
 MMSegmentation supports a total of 14 data sets. In addition to common academic data sets such as ADE20k and CityScapes, there are also application-oriented data sets such as medical and optical aerial remote sensing.
@@ -18,15 +17,15 @@ The figure below shows the data transformation pipeline during training of a typ
 - Model
 
 In MMSegmentation, a semantic segmentation algorithm model is called segmentor, and inherits OpenMMLab's consistent modular design, segmentor is divided into 6 modules, namely:
--
+
   - data_preprocessor is responsible for transporting the data output from the data transformation pipeline to the designated device, and performing operations such as normalization, padding, and batching on it. The advantage of this is that during the data change stage, the data format is uint8. After the data is transferred to the GPU, it is then converted to FP32 for normalization, which reduces the computing pressure on the CPU.
 
-Backbone extracts feature maps from input images. Common models include ResNet, Swin transformer, etc.
+  - Backbone extracts feature maps from input images. Common models include ResNet, Swin transformer, etc.
 
-Neck, connects backbone and decode_head, further processes the feature map output from backbone and then inputs it to the decoding head. Common networks include Feature Pyramid Network FPN.
+  - Neck, connects backbone and decode_head, further processes the feature map output from backbone and then inputs it to the decoding head. Common networks include Feature Pyramid Network FPN.
 
-decode_head is responsible for predicting the final segmentation result from the input feature map.
+  - decode_head is responsible for predicting the final segmentation result from the input feature map.
 
-auxiliary_head (optional) is responsible for predicting segmentation results from the input feature map, but the results only participate in loss calculation during the training process and do not participate in reasoning. During reasoning, the output results are only predicted from the decoding head.
+  - auxiliary_head (optional) is responsible for predicting segmentation results from the input feature map, but the results only participate in loss calculation during the training process and do not participate in reasoning. During reasoning, the output results are only predicted from the decoding head.
 
 Loss is responsible for the loss calculation of the neural network output results and true values, and is used for model gradient calculation during backpropagation.
