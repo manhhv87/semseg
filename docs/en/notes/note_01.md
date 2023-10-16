@@ -4,7 +4,6 @@
 
 MMSegmentation 1.0 introduces the SegDataSample data structure, which encapsulates the data in semantic segmentation and is used for data transfer between various functional modules. There are three fields in SegDataSample: gt_sem_seg, pred_sem_seg and seg_logits. The first two are segmentation masks corresponding to labels and model predictions, and seg logits are the unnormalized output of the last layer of the model.
 
--
   - Dataset and data change operations
 
 MMSegmentation supports a total of 14 data sets. In addition to common academic data sets such as ADE20k and CityScapes, there are also application-oriented data sets such as medical and optical aerial remote sensing.
