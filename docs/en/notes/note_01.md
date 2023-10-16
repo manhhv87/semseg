@@ -40,6 +40,10 @@ The model structure of segmentor is divided into encoder_decoder and cascade_enc
 
 <p align="center">
   <img src="figures/cascade_encoder_decoder_data_flow.awebp" />
+  cascade_encoder_decoder data flow
 </p>
 
-cascade_encoder_decoder data flow
+- **Data flow**
+
+The newly upgraded OpenMMLab 2.0 defines a data flow protocol, which is divided into two types: training and testing. During training, the dataloader carries the data processed by data transforms and passes it to the model train_step method. The model will first adjust the data preprocessing module, and then pass it to the forward function of the model, which is forwarded and the loss is calculated. This loss dict will be parsed by the parse_losses module to obtain a loss scalar, and then the update_params in the optimizer wrapper will be used to back-transmit the model, calculate the gradient, and update the parameters.
+
