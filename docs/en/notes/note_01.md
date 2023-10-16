@@ -58,3 +58,12 @@ The newly upgraded OpenMMLab 2.0 defines a data flow protocol, which is divided 
 <p align="center">
   Data flow during training
 </p>
+
+When testing, the data will be passed to the test_step method of the model. It is also preprocessed first and predict outputs datasample. The datasample here is the datasample input to the network, except that two new fields, pred_sem_seg and seg_logits, are added to save the prediction results of the network. Send this modified data sample and inputs to the evaluator to calculate evaluation indicators, or to the visualizer for processing.
+
+<p align="center">
+  <img src="figures/data_flow_testing.awebp" />
+</p>  
+<p align="center">
+  Data flow during testing
+</p>
