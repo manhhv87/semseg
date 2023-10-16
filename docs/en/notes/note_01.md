@@ -33,7 +33,10 @@ In MMSegmentation, a semantic segmentation algorithm model is called segmentor, 
 
 The model structure of segmentor is divided into encoder_decoder and cascade_encoder_decoder according to whether it is connected by multiple decode_head sets. The difference between the two is: there are multiple decode_heads in cascade_encoder_decoder, and starting from the second decoding head, the input of each decoding head is the output of the previous decoding head, and its function is to further refine the output results.
 
-![encoder_decoder](figures/encoder_decoder_data_stream.awebp)
+<p align="center">
+  <img src="figures/encoder_decoder_data_stream.awebp" />
+</p>
+<!-- ![encoder_decoder](figures/encoder_decoder_data_stream.awebp) -->
 
 encoder_decoder data stream
 
