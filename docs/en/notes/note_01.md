@@ -35,4 +35,8 @@ The model structure of segmentor is divided into encoder_decoder and cascade_enc
 
 ![encoder_decoder](figures/encoder_decoder_data_stream.awebp)
 
+encoder_decoder data stream
+
 ![cascade_encoder_decoder](figures/cascade_encoder_decoder_data_flow.awebp)
+
+cascade_encoder_decoder data flow
