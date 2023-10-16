@@ -49,6 +49,7 @@ The newly upgraded OpenMMLab 2.0 defines a data flow protocol, which is divided 
 
 <p align="center">
   <img src="figures/data_flow.awebp" />
-  
+</p>  
+<p align="center">
   Data flow during training
 </p>
