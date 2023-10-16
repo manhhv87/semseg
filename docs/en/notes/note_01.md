@@ -19,7 +19,7 @@ The figure below shows the data transformation pipeline during training of a typ
 
 In MMSegmentation, a semantic segmentation algorithm model is called segmentor, and inherits OpenMMLab's consistent modular design, segmentor is divided into 6 modules, namely:
 
-> data_preprocessor is responsible for transporting the data output from the data transformation pipeline to the designated device, and performing operations such as normalization, padding, and batching on it. The advantage of this is that during the data change stage, the data format is uint8. After the data is transferred to the GPU, it is then converted to FP32 for normalization, which reduces the computing pressure on the CPU.
+> - data_preprocessor is responsible for transporting the data output from the data transformation pipeline to the designated device, and performing operations such as normalization, padding, and batching on it. The advantage of this is that during the data change stage, the data format is uint8. After the data is transferred to the GPU, it is then converted to FP32 for normalization, which reduces the computing pressure on the CPU.
 
   - Backbone extracts feature maps from input images. Common models include ResNet, Swin transformer, etc.
 
