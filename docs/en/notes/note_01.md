@@ -6,7 +6,7 @@ MMSegmentation 1.0 introduces the SegDataSample data structure, which encapsulat
 
 - Dataset and data change operations
 
-MMSegmentation supports a total of 14 data sets. In addition to common academic data sets such as ADE20k and CityScapes, there are also application-oriented data sets such as medical and optical aerial remote sensing.
+-- MMSegmentation supports a total of 14 data sets. In addition to common academic data sets such as ADE20k and CityScapes, there are also application-oriented data sets such as medical and optical aerial remote sensing.
 
 MMSegmentation 1.0 newly defines BaseSegDataset, standardizes the functions and interfaces of semantic segmentation data sets, and is a subclass of BaseDataset in MMEngine. The main function of the data set is to load data information. There are two types of data information. One is the meta-information of the data set, including category information and palette information, which is the color corresponding to the category when rendering; the other is data information, which is saved. The image path and corresponding label path in the specific data set are specified.
 
