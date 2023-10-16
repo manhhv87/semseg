@@ -13,3 +13,4 @@ MMSegmentation 1.0 newly defines BaseSegDataset, standardizes the functions and 
 The dataset module contains a data transformation module, which supports many data transformations. During training or testing, a series of data transformations can be combined into a list, called a data pipeline, and passed to the pipeline parameters of the dataset, each module in the pipeline. The output is the input to the next module.
 The figure below shows the data transformation pipeline during training of a typical semantic segmentation model. For each pair of samples, after a data transformation operation, new fields (marked in green) or existing fields (marked in orange) will be added to the output dictionary.
 
+![demo image](figures/data_transformation_pipeline.awebp)
