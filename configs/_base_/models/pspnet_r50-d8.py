@@ -2,8 +2,8 @@
 norm_cfg = dict(type='SyncBN', requires_grad=True)  # Segmentation usually uses SyncBN
 data_preprocessor = dict(           # The config of data preprocessor, usually includes image normalization and augmentation.
     type='SegDataPreProcessor',     # The type of data preprocessor.
-    mean=[123.675, 116.28, 103.53], # Mean values used for normalizing the input images.
-    std=[58.395, 57.12, 57.375],    # Standard variance used for normalizing the input images.
+    mean=[0.485, 0.456, 0.406],     # Mean values used for normalizing the input images.
+    std=[0.229, 0.224, 0.225],      # Standard variance used for normalizing the input images.
     bgr_to_rgb=True,                # Whether to convert image from BGR to RGB.
     pad_val=0,                      # Padding value of image.
     seg_pad_val=255)                # Padding value of segmentation map.

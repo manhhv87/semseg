@@ -8,8 +8,8 @@ custom_imports = dict(
     imports=['mmpretrain.models'], allow_failed_imports=False)
 data_preprocessor = dict(
     type='SegDataPreProcessor',
-    mean=[123.675, 116.28, 103.53],
-    std=[58.395, 57.12, 57.375],
+    mean=[0.485, 0.456, 0.406],     
+    std=[0.229, 0.224, 0.225],      
     bgr_to_rgb=True,
     pad_val=0,
     seg_pad_val=255)

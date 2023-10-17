@@ -3,8 +3,8 @@ checkpoint = 'https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/segmen
 backbone_norm_cfg = dict(type='LN', eps=1e-6, requires_grad=True)
 data_preprocessor = dict(
     type='SegDataPreProcessor',
-    mean=[127.5, 127.5, 127.5],
-    std=[127.5, 127.5, 127.5],
+    mean=[0.485, 0.456, 0.406],     
+    std=[0.229, 0.224, 0.225],      
     bgr_to_rgb=True,
     pad_val=0,
     seg_pad_val=255)

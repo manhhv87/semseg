@@ -3,8 +3,8 @@ custom_imports = dict(imports='mmpretrain.models', allow_failed_imports=False)
 checkpoint_file = 'https://download.openmmlab.com/mmclassification/v0/convnext/downstream/convnext-base_3rdparty_32xb128-noema_in1k_20220301-2a0ee547.pth'  # noqa
 data_preprocessor = dict(
     type='SegDataPreProcessor',
-    mean=[123.675, 116.28, 103.53],
-    std=[58.395, 57.12, 57.375],
+    mean=[0.485, 0.456, 0.406],     
+    std=[0.229, 0.224, 0.225],      
     bgr_to_rgb=True,
     pad_val=0,
     seg_pad_val=255)
