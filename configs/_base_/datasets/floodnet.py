@@ -1,9 +1,9 @@
 # dataset settings
 dataset_type = 'FloodNetDataset'
 data_root = './data/FloodNet'
-train_img_scale = (3000, 4000)
-val_img_scale = (3000, 4000)
-test_img_scale = (3000, 4000)
+train_img_scale = (2056, 2124)
+val_img_scale = (1634, 1634)
+test_img_scale = (1634, 1634)
 crop_size = (512, 512)
 
 train_pipeline = [
@@ -86,5 +86,5 @@ test_dataloader = dict(
             img_path='images/test', seg_map_path='annotations/test'),
         pipeline=val_pipeline))
 
-val_evaluator = dict(type='IoUMetric', iou_metrics=['mDice'])
+val_evaluator = dict(type='IoUMetric', iou_metrics=['mDice', 'mIoU', 'mFscore'])
 test_evaluator = val_evaluator

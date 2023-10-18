@@ -21,9 +21,9 @@ class FloodNetDataset(BaseSegDataset):
     '.png'.
     """
     METAINFO = dict(
-        classes=('building-flooded', 'building-nonflooded', 'road-flooded',
+        classes=('background', 'building-flooded', 'building-nonflooded', 'road-flooded',
                  'road-nonflooded', 'water', 'tree', 'vehicle', 'pool', 'grass'),
-        palette=[[255, 0, 0], [0, 255, 0], [0, 255, 120], [0, 0, 255], [255, 0, 255], 
+        palette=[[0, 0, 0], [255, 0, 0], [0, 255, 0], [0, 255, 120], [0, 0, 255], [255, 0, 255], 
                  [70, 70, 220], [102, 102, 156], [190, 153, 153], [180, 165, 180]])
 
     def __init__(self, **kwargs) -> None:
